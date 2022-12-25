@@ -3,13 +3,15 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(360deg, #141C24 0%, rgba(20, 28, 36, 0) 95.65%);
+    background: linear-gradient(360deg, #141C24 90%, rgba(20, 28, 36, 0) 95.65%);
+    width: 100%;
 
 }
 
 .picture__frame {
 
     box-shadow: 0 0 0 rgba(0, 0, 0, 0.27);
+    height: 777px;
     padding-left: 50px;
     padding-right: 50px;
     border-radius: 15px;
@@ -24,19 +26,20 @@
 
 .picture__img {
     height: 777px;
-
+padding-right: 70px;
 }
 
 .picture__text {
     position: absolute;
     top: 47%;
-color: aliceblue;
-font-size: 3rem;
+    color: aliceblue;
+    font-size: 3rem;
 }
-.picture__text-little{
+
+.picture__text-little {
 
     position: absolute;
     top: 44%;
-color: aliceblue;
-font-size: 1rem;
+    color: aliceblue;
+    font-size: 1rem;
 }

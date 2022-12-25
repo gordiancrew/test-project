@@ -1,10 +1,4 @@
-.wrapper-page{
-    width: 100vw;
-    height: 100vh;
-    background-color: red;
-    font-family: AireExterior; 
-}
-.test{
-    font-family: AireExterior; 
-    background-color: rgb(117, 59, 194);
+.linia{
+    height: 2px;
+    background-color: #00C5FF;
 }

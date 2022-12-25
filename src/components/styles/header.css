@@ -29,10 +29,11 @@
     font-size: 16px;
     cursor: pointer;
     font-family: 'Roboto', sans-serif;
+    border-bottom: solid 1px  #161d23;
 }
 
 .header__item:hover {
     border-bottom: solid 1px #00C5FF;
-    border-top: solid 1px  #161d23;
+    
     padding-top: -1px;
 }
