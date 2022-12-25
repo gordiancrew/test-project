@@ -1,7 +1,10 @@
 import "../styles/global.css";
 import "../styles/content.css";
 import server from "../../images/ImageServerHost.png";
-import icon1 from "../../images/icons/Apple.png";
+import iconApple from "../../images/icons/Apple.png";
+import iconDownload from "../../images/icons/Download.png";
+import iconLibrary from "../../images/icons/Library.png";
+import iconMail from "../../images/icons/Mail.png";
 function Content() {
   return (
     <div className="content">
@@ -39,13 +42,27 @@ function Content() {
       </div>
       <div className="content__section3">
         <div className="content__section3-step1">
-          <img src={icon1}></img>
+          <img src={iconMail}></img>
           <div className="content__section3-linia"></div>
-          <img src={icon1}></img>
+          <img src={iconDownload}></img>
           <div className="content__section3-linia"></div>
-          <img src={icon1}></img>
+          <img src={iconLibrary}></img>
           <div className="content__section3-linia"></div>
-          <img src={icon1}></img>
+          <img src={iconApple}></img>
+        </div>
+        <div className="content__section3-step2">
+            <div className="content__text5">
+                Создайте аккаунт
+            </div>
+            <div className="content__text5">
+                Скачайте модуль
+            </div>
+            <div className="content__text5">
+                Выберите тариф
+            </div>
+            <div className="content__text5">
+                Начните играть
+            </div>
         </div>
       </div>
     </div>
