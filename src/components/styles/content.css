@@ -144,3 +144,69 @@
     color: aliceblue;
     font-size: 1.2rem;
 }
+
+.content__section4 {
+    padding-top: 200px;
+}
+
+.content__card-black {
+    width: 400px;
+    height: 545px;
+    background-color:#1F2631;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 5px;
+
+}
+
+.content__card-black-text1 {
+    padding-left: 47px;
+    padding-top: 100px;
+    font-size: 2rem;
+    font-family: 'Roboto', sans-serif;
+    color: aliceblue;
+
+}
+
+.content__card-black-text2 {
+    padding-left: 47px;
+    padding-top: 30px;
+    font-size: 1.5rem;
+    font-family: 'Roboto', sans-serif;
+    color: aliceblue;
+}
+
+.content__card-black-text3 {
+    padding-left: 47px;
+    padding-top: 30px;
+    font-size: 1.2rem;
+    padding-right: 47px;
+    font-family: 'Roboto', sans-serif;
+    color: aliceblue;
+    line-height: 150%;
+}
+
+.content__card-black-button-wrapper {
+    padding-top: 75px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content__card-black-button {
+    width: 320px;
+    height: 70px;
+    background-color: #00C5FF;
+    color: #141C24;
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+}
+
+.content__card-wrapper{
+    width: 80vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}

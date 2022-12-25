@@ -51,19 +51,53 @@ function Content() {
           <img src={iconApple}></img>
         </div>
         <div className="content__section3-step2">
-            <div className="content__text5">
-                Создайте аккаунт
-            </div>
-            <div className="content__text5">
-                Скачайте модуль
-            </div>
-            <div className="content__text5">
-                Выберите тариф
-            </div>
-            <div className="content__text5">
-                Начните играть
-            </div>
+          <div className="content__text5">Создайте аккаунт</div>
+          <div className="content__text5">Скачайте модуль</div>
+          <div className="content__text5">Выберите тариф</div>
+          <div className="content__text5">Начните играть</div>
         </div>
+      </div>
+      <div className="content__text4">Начать</div>
+      <div className="content__linia3 "></div>
+      <div className="content__text-step1 content__section4">
+        <div className="content__step1-linia linia"></div>
+        <div className="content__text1 ">Гибкие тарифы</div>
+      </div>
+      <div className="content__text2">Доступные подписки</div>
+      <div className="content__card-wrapper">
+        <div className="content__card-black">
+          <div className="content__card-black-text1">Почасовая оплата</div>
+          <div className="content__card-black-text2">45 р. - час</div>
+          <div className="content__card-black-text3">
+            Доступно: Каталог игр Виртуальный ПК Безлимитная игровая сессия
+          </div>
+          <div className="content__card-black-button-wrapper">
+            <div className="content__card-black-button">Выбрать</div>
+          </div>
+        </div>
+
+        <div className="content__card-black">
+          <div className="content__card-black-text1">Почасовая оплата</div>
+          <div className="content__card-black-text2">45 р. - час</div>
+          <div className="content__card-black-text3">
+            Доступно: Каталог игр Виртуальный ПК Безлимитная игровая сессия
+          </div>
+          <div className="content__card-black-button-wrapper">
+            <div className="content__card-black-button">Выбрать</div>
+          </div>
+        </div>
+
+        <div className="content__card-black">
+          <div className="content__card-black-text1">Почасовая оплата</div>
+          <div className="content__card-black-text2">45 р. - час</div>
+          <div className="content__card-black-text3">
+            Доступно: Каталог игр Виртуальный ПК Безлимитная игровая сессия
+          </div>
+          <div className="content__card-black-button-wrapper">
+            <div className="content__card-black-button">Выбрать</div>
+          </div>
+        </div>
+        
       </div>
     </div>
   );
