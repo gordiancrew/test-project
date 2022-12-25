@@ -1,7 +1,7 @@
 import "../styles/global.css";
 import "../styles/content.css";
 import server from "../../images/ImageServerHost.png";
-
+import icon1 from "../../images/icons/Apple.png";
 function Content() {
   return (
     <div className="content">
@@ -31,12 +31,22 @@ function Content() {
         </div>
       </div>
       <div className="content__section2">
-      <div className="content__text-step1">
-            <div className="content__step1-linia linia"></div>
-            <div className="content__text1">Быстрый старт</div>
-          </div>
-          <div className="content__text2">Начни играть</div>
-
+        <div className="content__text-step1">
+          <div className="content__step1-linia linia"></div>
+          <div className="content__text1">Быстрый старт</div>
+        </div>
+        <div className="content__text2">Начни играть</div>
+      </div>
+      <div className="content__section3">
+        <div className="content__section3-step1">
+          <img src={icon1}></img>
+          <div className="content__section3-linia"></div>
+          <img src={icon1}></img>
+          <div className="content__section3-linia"></div>
+          <img src={icon1}></img>
+          <div className="content__section3-linia"></div>
+          <img src={icon1}></img>
+        </div>
       </div>
     </div>
   );

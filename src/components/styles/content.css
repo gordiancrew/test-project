@@ -105,3 +105,24 @@ padding-top:100px;
 .content__section2{
     padding-top: 100px;
 }
+.content__section3{
+    width: 850px;
+    height: 110px;
+    background-color: blue;
+  padding-top: 100px;
+   
+    align-items: center;
+}
+.content__section3-step1{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.content__section3-icon{
+
+}
+.content__section3-linia{
+ background-color: #00C5FF;
+ height: 1px;
+ width: 73px;
+}
