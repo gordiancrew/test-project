@@ -9,7 +9,10 @@ import Picture from "./components/main/picture";
 import Content from "./components/main/content";
 
 function App() {
+  
+ 
   return (
+    
     <div>
       <Header />
       <Picture />
