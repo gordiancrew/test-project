@@ -9,6 +9,7 @@ import Header from "./components/main/header";
 import Picture from "./components/main/picture";
 import Content from "./components/main/content";
 import Home from "./components/main/Home";
+import Registration from "./components/main/registration";
 
 function App() {
   
@@ -26,7 +27,7 @@ function App() {
 
 <Routes>
 <Route path="/" element={<Home />}/>
-<Route path="/www" element={<Picture />}/>
+<Route path="/registration" element={<Registration />}/>
 
 
 

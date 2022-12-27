@@ -210,3 +210,7 @@ border-radius: 5px;
     flex-wrap: wrap;
     justify-content: space-around;
 }
+
+Link{
+   border: solid 1px black;
+}

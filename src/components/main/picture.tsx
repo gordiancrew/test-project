@@ -8,9 +8,9 @@ let count = 1;
 
 const arraySliders = [pic1, pic2, pic3, pic4];
 function Picture() {
-  let newInt = setInterval(function () {
-    clearInterval(newInt);
-  }, 10);
+  // let newInt = setInterval(function () {
+  //   clearInterval(newInt);
+  // }, 10);
 
   setInterval(() => {
     count++;

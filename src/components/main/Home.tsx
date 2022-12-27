@@ -5,6 +5,7 @@ import Content from "./content";
 function Home() {
 
     return (
+        
         <div>
             <Header />
             <Picture />

@@ -5,13 +5,21 @@ import iconApple from "../../images/icons/Apple.png";
 import iconDownload from "../../images/icons/Download.png";
 import iconLibrary from "../../images/icons/Library.png";
 import iconMail from "../../images/icons/Mail.png";
+import {Link} from 'react-router-dom';
 
 
 function Content() {
-//   let www=document.querySelector("#www") as HTMLElement;
-//   www.onclick=function(){
-// alert('www');
+//   let button2=document.querySelector('.button2') as HTMLButtonElement;
+//   button2.onclick=function(){
+// alert('hello');
 //   }
+
+function test(){
+ window.location.href="registration";
+}
+
+
+ 
   return (
     <div className="content">
       <div className="content__section1">
@@ -78,32 +86,34 @@ function Content() {
             Доступно: Каталог игр Виртуальный ПК Безлимитная игровая сессия
           </div>
           <div className="content__card-black-button-wrapper">
-            <a href="www">
-            <div className="content__card-black-button" id='www'>www</div>
+            <Link to="registration">
+            <div className="content__card-black-button" >www</div>
+            </Link>
+          </div>
+        </div>
+
+        <div className="content__card-black">
+          <div className="content__card-black-text1">Почасовая оплата</div>
+          <div className="content__card-black-text2">45 р. - час</div>
+          <div className="content__card-black-text3">
+            Доступно: Каталог игр Виртуальный ПК Безлимитная игровая сессия
+          </div>
+          <div className="content__card-black-button-wrapper">
+            <div className="content__card-black-button button2" 
+            onClick={test}>sss</div>
+          </div>
+        </div>
+
+        <div className="content__card-black">
+          <div className="content__card-black-text1">Почасовая оплата</div>
+          <div className="content__card-black-text2">45 р. - час</div>
+          <div className="content__card-black-text3">
+            Доступно: Каталог игр Виртуальный ПК Безлимитная игровая сессия
+          </div>
+          <div className="content__card-black-button-wrapper">
+<a href="registration">
+            <div className="content__card-black-button">Выбрать</div>
             </a>
-          </div>
-        </div>
-
-        <div className="content__card-black">
-          <div className="content__card-black-text1">Почасовая оплата</div>
-          <div className="content__card-black-text2">45 р. - час</div>
-          <div className="content__card-black-text3">
-            Доступно: Каталог игр Виртуальный ПК Безлимитная игровая сессия
-          </div>
-          <div className="content__card-black-button-wrapper">
-            <div className="content__card-black-button">Выбрать</div>
-          </div>
-        </div>
-
-        <div className="content__card-black">
-          <div className="content__card-black-text1">Почасовая оплата</div>
-          <div className="content__card-black-text2">45 р. - час</div>
-          <div className="content__card-black-text3">
-            Доступно: Каталог игр Виртуальный ПК Безлимитная игровая сессия
-          </div>
-          <div className="content__card-black-button-wrapper">
-
-            <div className="content__card-black-button">Выбрать</div>
           </div>
         </div>
         
