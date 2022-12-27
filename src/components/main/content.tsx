@@ -8,6 +8,10 @@ import iconMail from "../../images/icons/Mail.png";
 
 
 function Content() {
+//   let www=document.querySelector("#www") as HTMLElement;
+//   www.onclick=function(){
+// alert('www');
+//   }
   return (
     <div className="content">
       <div className="content__section1">
@@ -74,7 +78,9 @@ function Content() {
             Доступно: Каталог игр Виртуальный ПК Безлимитная игровая сессия
           </div>
           <div className="content__card-black-button-wrapper">
-            <div className="content__card-black-button">Выбрать</div>
+            <a href="www">
+            <div className="content__card-black-button" id='www'>www</div>
+            </a>
           </div>
         </div>
 
@@ -96,6 +102,7 @@ function Content() {
             Доступно: Каталог игр Виртуальный ПК Безлимитная игровая сессия
           </div>
           <div className="content__card-black-button-wrapper">
+
             <div className="content__card-black-button">Выбрать</div>
           </div>
         </div>
