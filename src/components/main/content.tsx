@@ -5,21 +5,18 @@ import iconApple from "../../images/icons/Apple.png";
 import iconDownload from "../../images/icons/Download.png";
 import iconLibrary from "../../images/icons/Library.png";
 import iconMail from "../../images/icons/Mail.png";
-import {Link} from 'react-router-dom';
-
+import { Link } from "react-router-dom";
 
 function Content() {
-//   let button2=document.querySelector('.button2') as HTMLButtonElement;
-//   button2.onclick=function(){
-// alert('hello');
-//   }
+  //   let button2=document.querySelector('.button2') as HTMLButtonElement;
+  //   button2.onclick=function(){
+  // alert('hello');
+  //   }
 
-function test(){
- window.location.href="registration";
-}
+  function test() {
+    window.location.href = "registration";
+  }
 
-
- 
   return (
     <div className="content">
       <div className="content__section1">
@@ -56,19 +53,32 @@ function test(){
       </div>
       <div className="content__section3">
         <div className="content__section3-step1">
-          <img src={iconMail}></img>
-          <div className="content__section3-linia"></div>
-          <img src={iconDownload}></img>
-          <div className="content__section3-linia"></div>
-          <img src={iconLibrary}></img>
-          <div className="content__section3-linia"></div>
-          <img src={iconApple}></img>
-        </div>
-        <div className="content__section3-step2">
-          <div className="content__text5">Создайте аккаунт</div>
-          <div className="content__text5">Скачайте модуль</div>
-          <div className="content__text5">Выберите тариф</div>
-          <div className="content__text5">Начните играть</div>
+          <div className="content__section3-step1-part">
+            <div className="content__section3-box">
+              <img src={iconMail} className="content__section3-icon"></img>
+              <div className="content__text5">Создайте аккаунт</div>
+            </div>
+
+            <div className="content__section3-linia"></div>
+
+            <div className="content__section3-box">
+              <img src={iconDownload} className="content__section3-icon"></img>
+              <div className="content__text5">Скачайте модуль</div>
+            </div>
+          </div>
+          <div className="content__section3-linia linia-middle"></div>
+          <div className="content__section3-step1-part">
+            <div className="content__section3-box">
+              <img src={iconLibrary} className="content__section3-icon"></img>
+              <div className="content__text5">Выберите тариф</div>
+            </div>
+
+            <div className="content__section3-linia"></div>
+            <div className="content__section3-box">
+              <img src={iconApple} className="content__section3-icon"></img>
+              <div className="content__text5">Начните играть</div>
+            </div>
+          </div>
         </div>
       </div>
       <div className="content__text4">Начать</div>
@@ -87,7 +97,7 @@ function test(){
           </div>
           <div className="content__card-black-button-wrapper">
             <Link to="registration">
-            <div className="content__card-black-button" >www</div>
+              <div className="content__card-black-button">www</div>
             </Link>
           </div>
         </div>
@@ -99,8 +109,9 @@ function test(){
             Доступно: Каталог игр Виртуальный ПК Безлимитная игровая сессия
           </div>
           <div className="content__card-black-button-wrapper">
-            <div className="content__card-black-button button2" 
-            onClick={test}>sss</div>
+            <div className="content__card-black-button button2" onClick={test}>
+              sss
+            </div>
           </div>
         </div>
 
@@ -111,12 +122,11 @@ function test(){
             Доступно: Каталог игр Виртуальный ПК Безлимитная игровая сессия
           </div>
           <div className="content__card-black-button-wrapper">
-<a href="registration">
-            <div className="content__card-black-button">Выбрать</div>
+            <a href="registration">
+              <div className="content__card-black-button">Выбрать</div>
             </a>
           </div>
         </div>
-        
       </div>
     </div>
   );

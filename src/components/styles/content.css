@@ -1,5 +1,5 @@
 .content {
-    height: 3760px;
+    /* height: 3760px; */
 
     /* justify-content: center; */
     background: linear-gradient(360deg, rgba(20, 28, 36, 0) 95.65%, #141C24 0%);
@@ -111,8 +111,8 @@
 }
 
 .content__section3 {
-    width: 850px;
-    height: 110px;
+    /* width: 850px; */
+    /* height: 110px; */
 
     padding-top: 100px;
 
@@ -124,6 +124,12 @@
     justify-content: space-around;
     align-items: center;
 }
+.content__section3-step1-part{
+    display:flex;
+   
+    
+    align-items: center;
+}
 
 .content__section3-step2 {
     display: flex;
@@ -131,18 +137,30 @@
     align-items: center;
 }
 
-.content__section3-icon {}
+.content__section3-icon {
+
+    /* padding:0 50px; */
+}
+.content__section3-box{
+display: flex;
+flex-direction: column;
+align-items: center;
+background-color: black;
+}
 
 .content__section3-linia {
     background-color: #00C5FF;
     height: 1px;
-    width: 73px;
+    width: 70px;
+    margin-top:-40px;
 }
 
 .content__text5 {
     font-family: 'Roboto', sans-serif;
     color: aliceblue;
     font-size: 1.2rem;
+    padding-top:20px;
+    /* padding:0 50px; */
 }
 
 .content__section4 {
@@ -150,7 +168,7 @@
 }
 
 .content__card-black {
-    width: 400px;
+    width: 30%;
     height: 545px;
     background-color:#1F2631;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -193,7 +211,8 @@ border-radius: 5px;
 }
 
 .content__card-black-button {
-    width: 320px;
+    /* width: 320px; */
+    width:20vw;
     height: 70px;
     background-color: #00C5FF;
     color: #141C24;
@@ -205,12 +224,40 @@ border-radius: 5px;
 }
 
 .content__card-wrapper{
-    width: 80vw;
+    width: 85vw;
     display: flex;
-    flex-wrap: wrap;
+   
     justify-content: space-around;
 }
 
 Link{
    border: solid 1px black;
+}
+@media(max-width:1050px){
+
+    .content__card-wrapper{
+        flex-direction: column;
+    }
+    .content__card-black {
+        width: 100%;
+        margin-top: 20px;
+    }
+    .content__card-black-button{
+        width:70vw;
+    }
+    .content__section3-step1{
+        flex-direction: column;
+        justify-content: space-around;
+       
+    }
+    /* .content__section3-step1-part{
+      margin-top: 100px;
+    } */
+    .content__section3{
+        padding-top: 0;
+    }
+    .linia-middle{
+        margin-top: 0;
+        transform:  rotate(45deg);
+    }
 }
