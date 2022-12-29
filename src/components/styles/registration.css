@@ -131,3 +131,14 @@
 .border-red{
     border-color:red;
 }
+.pop{
+    position: absolute;
+    width: 30vw;
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:aqua;
+    font-size: 2rem;
+
+}

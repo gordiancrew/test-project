@@ -6,8 +6,9 @@ function Registration() {
   let isLoginValid = false;
   let isPasswordValid = false;
   let isCheckbox = false;
+  let username = '?';
   function checkBoxChange() {
-    
+
     let checkBox = document.querySelector('.registration__checkbox') as HTMLInputElement;
     if (checkBox.checked) {
       isCheckbox = true;
@@ -23,27 +24,37 @@ function Registration() {
   function checkBtn() {
     let btn = document.querySelector('.btn') as HTMLElement;
 
-    if (isLoginValid && isPasswordValid&&isCheckbox) {
+    if (isLoginValid && isPasswordValid && isCheckbox) {
       btn.classList.add('registration__let-reg-activ');
       btn.onclick = function () {
-        window.location.href = '/';
+        let registration = document.querySelector('.registration');
+        let pop = document.createElement('div');
+        pop.classList.add('pop');
+        pop.innerText = 'Hello ' + username;
+        registration?.appendChild(pop);
+
+
+
+        setTimeout(()=>window.location.href = '/', 3000);
+
+
       }
     } else {
 
       btn.classList.remove('registration__let-reg-activ');
-      btn.onclick=function(){
+      btn.onclick = function () {
         alert('Некоректные данные');
       }
     }
   }
 
-  function validateEmail(email:string) {
+  function validateEmail(email: string) {
     let validEmail = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
-   
-    if(validEmail.test(email) == false) {
-       return false;
-    }else{return true}
- }
+
+    if (validEmail.test(email) == false) {
+      return false;
+    } else { return true }
+  }
 
   function nameChange(e: ChangeEvent) {
     let login = document.querySelector('.login') as HTMLInputElement;
@@ -54,6 +65,7 @@ function Registration() {
       login.classList.add('border-green');
       login.classList.remove('border-red');
       isLoginValid = true;
+      username = login.value;
       checkBtn();
     } else {
       login.classList.remove('border-green');
@@ -66,7 +78,7 @@ function Registration() {
 
   function passwordChange(e: ChangeEvent) {
     let password = document.querySelector('.password') as HTMLInputElement;
-    if (password.value.length>=8&&password.value.length<20) {
+    if (password.value.length >= 8 && password.value.length < 20) {
       password.classList.add('border-green');
       password.classList.remove('border-red');
       isPasswordValid = true;
