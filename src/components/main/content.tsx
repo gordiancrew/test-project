@@ -21,7 +21,7 @@ function Content() {
     <div className="content">
       <div className="content__section1">
         <div className="content__section1-left">
-          <img src={server} className="content__section-left-img"></img>
+          <img src={server} className="content__section-left-img maxi"></img>
         </div>
         <div className="content__section1-right">
           <div className="content__text-step1">
@@ -33,7 +33,8 @@ function Content() {
             Наши сервера запускают игру, и передают вам картинку, которой вы
             можете управлять в реальном времени!
           </div>
-          <div className="content__linia2"></div>
+          <div className="content__linia2 "></div>
+          <img src={server} className="content__section-left-img mini"></img>
           <div className="content__text3">
             Приложение запустится на ПК с процессором от 1.5 GHz , от 1 Gb RAM и
             доступом в интернет от 15 мбит/с на всех операционых системах
