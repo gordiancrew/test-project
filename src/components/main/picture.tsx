@@ -29,10 +29,10 @@ function Picture() {
     <div className="picture">
       <img src={logWhite} className="picture__log-white"></img>
       <div className="picture__block-upgrate">UPGRADE</div>
-      <div className="picture__burger" onClick={burgerGo}><div className="picture__burger-up">|</div>
-        <div className="picture__burger-down">|</div>
-      </div>
+     
       <div className="picture__frame">
+      <div className="picture__burger" onClick={burgerGo}>||
+      </div>
         <div className='burger-menu'>
           <div className="burger__item"> Главная </div>
           <div className="burger__item"> Сервера </div>

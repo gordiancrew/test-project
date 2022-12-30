@@ -253,6 +253,20 @@
     display: initial;
 }
 
+.content__section5 {
+    padding-top: 330px;
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+    justify-content: space-between;
+
+}
+
+.content__section5-left {
+    width: 450px;
+
+}
+
 @media(max-width:1050px) {
 
     .content__card-wrapper {
@@ -274,9 +288,6 @@
 
     }
 
-    /* .content__section3-step1-part{
-      margin-top: 100px;
-    } */
     .content__section3 {
         padding-top: 0;
         position: relative;
@@ -321,8 +332,17 @@
         padding-left: 20px;
     }
 
+    .content__section5-left {
+        width: 100%;
+    }
 
+    .content__section5-right {
+        display: none;
+    }
 
+    .content__section5 {
+        padding-top: 30px;
+    }
 
     .maxi {
         display: none;

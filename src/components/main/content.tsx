@@ -5,7 +5,8 @@ import iconApple from "../../images/icons/Apple.png";
 import iconDownload from "../../images/icons/Download.png";
 import iconLibrary from "../../images/icons/Library.png";
 import iconMail from "../../images/icons/Mail.png";
-import { Link } from "react-router-dom";
+import imageBrowser from "../../images/ImageBrowser.png";
+
 
 function Content() {
 
@@ -130,17 +131,25 @@ function Content() {
         </div>
       </div>
 
-      {/* <div className="content__section5">
+      <div className="content__section5">
         <div className="content__section5-left">
+          <div className="content__text-step1">
+            <div className="content__step1-linia linia"></div>
+            <div className="content__text1">Играть можно в браузере</div>
+          </div>
+          <div className="content__text2">Запускайте на любых устройствах</div>
+          <div className="content__text3">
+            Наш модуль доступен на все популярные ОС
+            и работает на всех компьютерах.
+          </div>
 
+          <div className="content__text4">Открыть в браузере</div>
+          <div className="content__linia3"></div>
         </div>
         <div className="content__section5-right">
-          
+          <img src={imageBrowser} ></img>
         </div>
-
-
-
-      </div> */}
+      </div>
     </div>
   );
 }
