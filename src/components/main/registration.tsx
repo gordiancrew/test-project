@@ -35,7 +35,7 @@ function Registration() {
 
 
 
-        setTimeout(()=>window.location.href = '/', 3000);
+        setTimeout(() => window.location.href = '/', 3000);
 
 
       }
@@ -43,7 +43,13 @@ function Registration() {
 
       btn.classList.remove('registration__let-reg-activ');
       btn.onclick = function () {
-        alert('Некоректные данные');
+
+        const message: string = (!isLoginValid ? 'Некорректный email адресс  \n' : '') +
+         ( !isPasswordValid ? 'Пароль должен состоять минимум из 8 символов и не больше 20\n' : '') +
+           ( !isCheckbox ? 'Нужно принять условия!\n' : '');
+        alert(
+          message
+        );
       }
     }
   }

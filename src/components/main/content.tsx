@@ -8,14 +8,7 @@ import iconMail from "../../images/icons/Mail.png";
 import { Link } from "react-router-dom";
 
 function Content() {
-  //   let button2=document.querySelector('.button2') as HTMLButtonElement;
-  //   button2.onclick=function(){
-  // alert('hello');
-  //   }
 
-  function test() {
-    window.location.href = "registration";
-  }
 
   return (
     <div className="content">
@@ -97,30 +90,37 @@ function Content() {
             Доступно: Каталог игр Виртуальный ПК Безлимитная игровая сессия
           </div>
           <div className="content__card-black-button-wrapper">
-            <Link to="registration">
-              <div className="content__card-black-button">www</div>
-            </Link>
+            <a href="registration">
+              <div className="content__card-black-button">Выбрать</div>
+            </a>
           </div>
         </div>
 
-        <div className="content__card-black">
-          <div className="content__card-black-text1">Почасовая оплата</div>
-          <div className="content__card-black-text2">45 р. - час</div>
-          <div className="content__card-black-text3">
-            Доступно: Каталог игр Виртуальный ПК Безлимитная игровая сессия
+        <div className="content__card-black inverse">
+          <div className="content__card-black-text1 inverse">Подписка Максимум</div>
+          <div className="content__card-black-text2 inverse">2999 р.  -  месяц</div>
+          <div className="content__card-black-text3 inverse">
+            Доступно:
+            Каталог игр
+            Виртуальный ПК
+            Игровая сессия 10 часов/день
           </div>
           <div className="content__card-black-button-wrapper">
-            <div className="content__card-black-button button2" onClick={test}>
-              sss
-            </div>
+            <a href="registration">
+              <div className="content__card-black-button button-inverse button2" >
+                Выбрать
+              </div>
+            </a>
           </div>
         </div>
 
         <div className="content__card-black">
-          <div className="content__card-black-text1">Почасовая оплата</div>
-          <div className="content__card-black-text2">45 р. - час</div>
+          <div className="content__card-black-text1">Подписка Минимум</div>
+          <div className="content__card-black-text2">1500 р.  -  меся</div>
           <div className="content__card-black-text3">
-            Доступно: Каталог игр Виртуальный ПК Безлимитная игровая сессия
+            Доступно:
+            Каталог игр
+            Игровая сессия 4 часов/день
           </div>
           <div className="content__card-black-button-wrapper">
             <a href="registration">
@@ -129,6 +129,18 @@ function Content() {
           </div>
         </div>
       </div>
+
+      {/* <div className="content__section5">
+        <div className="content__section5-left">
+
+        </div>
+        <div className="content__section5-right">
+          
+        </div>
+
+
+
+      </div> */}
     </div>
   );
 }
