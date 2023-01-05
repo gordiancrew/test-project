@@ -1,30 +1,19 @@
-import { ChangeEvent, useState } from "react";
+import { ChangeEvent, useEffect, useState } from "react";
 import "../styles/global.css";
 import "../styles/registration.css";
 
 function Registration() {
   const [isLoginValid, setLoginValid] = useState(false);
-  // let isPasswordValid = false;
-  const[isPasswordValid, setPasswordValid]=useState(false);
-  let isCheckbox = false;
-  const[userName, setUserName]=useState('?');
-  function checkBoxChange() {
-    let checkBox = document.querySelector(
-      ".registration__checkbox"
-    ) as HTMLInputElement;
-    if (checkBox.checked) {
-      isCheckbox = true;
-      checkBtn();
-    } else {
-      isCheckbox = false;
-      checkBtn();
-    }
-  }
+  const [isPasswordValid, setPasswordValid] = useState(false);
+  const [isAgree, setAgree] = useState(false);
+  const [userName, setUserName] = useState('?');
+  useEffect(() => checkBtn(), [isAgree, isLoginValid, isPasswordValid])
+
 
   function checkBtn() {
     let btn = document.querySelector(".btn") as HTMLElement;
 
-    if (isLoginValid && isPasswordValid && isCheckbox) {
+    if (isLoginValid && isPasswordValid && isAgree) {
       btn.classList.add("registration__let-reg-activ");
       btn.onclick = function () {
         let registration = document.querySelector(".registration");
@@ -43,7 +32,7 @@ function Registration() {
           (!isPasswordValid
             ? "Пароль должен состоять минимум из 8 символов и не больше 20\n"
             : "") +
-          (!isCheckbox ? "Нужно принять условия!\n" : "");
+          (!isAgree ? "Нужно принять условия!\n" : "");
         alert(message);
       };
     }
@@ -66,12 +55,10 @@ function Registration() {
       e.target.classList.remove("border-red");
       setLoginValid(true);
       setUserName(e.target.value);
-      checkBtn();
     } else {
       e.target.classList.remove("border-green");
       e.target.classList.add("border-red");
       setLoginValid(false);
-      checkBtn();
     }
   }
 
@@ -80,12 +67,10 @@ function Registration() {
       e.target.classList.add("border-green");
       e.target.classList.remove("border-red");
       setPasswordValid(true);
-      checkBtn();
     } else {
       e.target.classList.remove("border-green");
       e.target.classList.add("border-red");
       setPasswordValid(false);
-      checkBtn();
     }
   }
 
@@ -115,7 +100,7 @@ function Registration() {
             <input
               type="checkbox"
               className="registration__checkbox"
-              onClick={checkBoxChange}
+              onClick={() => setAgree(!isAgree)}
             ></input>
           </form>
           <div className="registration__text-agree">
