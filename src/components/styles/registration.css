@@ -11,22 +11,17 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-
-
 }
 
 .registration__reg-enter {
-
     width: 100%;
     display: flex;
-
 }
 
 .registration__reg-text {
     padding: 20px 40px;
     font-size: 3rem;
     color: white;
-
 }
 
 .registration__enter-text {
@@ -57,8 +52,7 @@
 .registration__let-reg {
     width: 250px;
     height: 60px;
-    background-color:
-        rgba(255, 255, 255, 1);
+    background-color:  rgba(255, 255, 255, 1);
     font-size: 1.2rem;
     margin-top: 30px;
     display: flex;
@@ -96,7 +90,6 @@
     font-family: 'Roboto', sans-serif;
     font-weight: 100;
     font-size: 0.8rem;
-
     font-style: normal;
     font-weight: 200;
 }
@@ -119,31 +112,20 @@
     font-family: 'Roboto', sans-serif;
     font-weight: 100;
     font-size: 0.8rem;
-
     font-style: normal;
     font-weight: 200;
     padding: 0 15px;
-
 }
-
-/* .border-green {
-    outline: 3px solid green;
-}
-
-.border-red {
-    border-color: red;
-} */
 
 .pop {
     position: absolute;
     width: 30vw;
     height: 30vh;
-    display: flex;
+    z-index: 20;
     justify-content: center;
     align-items: center;
     background-color: aqua;
     font-size: 2rem;
-
 }
 
 @media(max-width:1050px) {
@@ -160,23 +142,17 @@
 
         padding-left: 60px;
         padding-bottom: 50px;
-
-
     }
 
     .registration__reg-text {
         padding: 0;
-
-
     }
 
     .registration__enter-text {
         padding: 0;
-
     }
 
     .pop {
         width: 80vw;
     }
-
 }

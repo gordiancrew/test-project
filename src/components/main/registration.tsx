@@ -9,34 +9,40 @@ function Registration() {
   const [userName, setUserName] = useState('?');
   useEffect(() => checkBtn(), [isAgree, isLoginValid, isPasswordValid]);
 
+  const styleInputLogin = {
+    outline: isLoginValid ? '3px solid green' : '3px solid red'
+  }
 
-const styleInputLogin={
-  outline: isLoginValid? '3px solid green':'3px solid red'
-}
+  const styleInputPassword = {
+    outline: isPasswordValid ? '3px solid green' : '3px solid red'
+  }
 
-const styleInputPassword={
-  outline: isPasswordValid? '3px solid green':'3px solid red'
-}
+  const classesButtonSubmit = isLoginValid && isLoginValid && isAgree ?
+    'registration__let-reg btn registration__let-reg-activ' : 'registration__let-reg btn';
+
+  const [stylePop, setStylePop] = useState({ display: 'none' })
+
+
 
   function checkBtn() {
     let btn = document.querySelector(".btn") as HTMLElement;
 
     if (isLoginValid && isPasswordValid && isAgree) {
-      
-      btn.classList.add("registration__let-reg-activ");
-      
+
+      // btn.classList.add("registration__let-reg-activ");
+
       btn.onclick = function () {
 
-        let registration = document.querySelector(".registration");
-        let pop = document.createElement("div");
-        pop.classList.add("pop");
-        pop.innerText = "Hello " + userName;
-        registration?.appendChild(pop);
-
+        // let registration = document.querySelector(".registration");
+        // let pop = document.createElement("div");
+        // pop.classList.add("pop");
+        // pop.innerText = "Hello " + userName;
+        // registration?.appendChild(pop);
+        setStylePop({ display: 'flex' });
         setTimeout(() => (window.location.href = "/"), 3000);
       };
     } else {
-      btn.classList.remove("registration__let-reg-activ");
+      // btn.classList.remove("registration__let-reg-activ");
       btn.onclick = function () {
         const message: string =
           (!isLoginValid ? "Некорректный email адресс  \n" : "") +
@@ -53,36 +59,28 @@ const styleInputPassword={
     let validEmail =
       /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
 
-    if (validEmail.test(email) == false) {
-      return false;
-    } else {
-      return true;
-    }
+    return validEmail.test(email);
+
   }
 
-  function nameChange(e: ChangeEvent<HTMLInputElement>) {
+  const nameChange = (e: ChangeEvent<HTMLInputElement>) => {
     if (validateEmail(e.target.value)) {
-
       setLoginValid(true);
       setUserName(e.target.value);
     } else {
-
       setLoginValid(false);
     }
   }
 
-  function passwordChange(e: ChangeEvent<HTMLInputElement>) {
-    if (e.target.value.length >= 8 && e.target.value.length < 20) {
-    
-      setPasswordValid(true);
-    } else {
-     
-      setPasswordValid(false);
-    }
+  const passwordChange = (e: ChangeEvent<HTMLInputElement>) => {
+    (e.target.value.length >= 8 && e.target.value.length < 20) ? setPasswordValid(true) : setPasswordValid(false);
   }
 
   return (
     <div className="registration">
+      <div style={stylePop} className="pop">
+        Hello-{userName}
+      </div>
       <div className="registration__box">
         <div className="registration__reg-enter">
           <div className="registration__reg-text">Регестрация</div>
@@ -90,20 +88,20 @@ const styleInputPassword={
         </div>
         <form className="registration__form">
           <input
-          style={styleInputLogin}
+            style={styleInputLogin}
             className="registration__form-input login"
             placeholder="Почта/Телефон"
             onChange={(e) => nameChange(e)}
           />
           <input
-          style={styleInputPassword}
+            style={styleInputPassword}
             className="registration__form-input password"
             placeholder="Пароль"
             type="password"
             onChange={(e) => passwordChange(e)}
           ></input>
         </form>
-        <div className="registration__let-reg btn">Зарегестрироваться</div>
+        <div className={classesButtonSubmit}>Зарегестрироваться</div>
         <div className="registration__agree-box">
           <form>
             <input
@@ -122,7 +120,7 @@ const styleInputPassword={
             конфиденциальности WARPLAY.CLOUD для детей
           </div>
         </div>
-        <div className="registration__alter-enter ">
+        <div className="registration__alter-enter">
           <div className="registration__linia"></div>
           <div className="registration__alter-enter-text">Войти через</div>
 
