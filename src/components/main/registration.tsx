@@ -7,15 +7,26 @@ function Registration() {
   const [isPasswordValid, setPasswordValid] = useState(false);
   const [isAgree, setAgree] = useState(false);
   const [userName, setUserName] = useState('?');
-  useEffect(() => checkBtn(), [isAgree, isLoginValid, isPasswordValid])
+  useEffect(() => checkBtn(), [isAgree, isLoginValid, isPasswordValid]);
 
+
+const styleInputLogin={
+  outline: isLoginValid? '3px solid green':'3px solid red'
+}
+
+const styleInputPassword={
+  outline: isPasswordValid? '3px solid green':'3px solid red'
+}
 
   function checkBtn() {
     let btn = document.querySelector(".btn") as HTMLElement;
 
     if (isLoginValid && isPasswordValid && isAgree) {
+      
       btn.classList.add("registration__let-reg-activ");
+      
       btn.onclick = function () {
+
         let registration = document.querySelector(".registration");
         let pop = document.createElement("div");
         pop.classList.add("pop");
@@ -51,25 +62,21 @@ function Registration() {
 
   function nameChange(e: ChangeEvent<HTMLInputElement>) {
     if (validateEmail(e.target.value)) {
-      e.target.classList.add("border-green");
-      e.target.classList.remove("border-red");
+
       setLoginValid(true);
       setUserName(e.target.value);
     } else {
-      e.target.classList.remove("border-green");
-      e.target.classList.add("border-red");
+
       setLoginValid(false);
     }
   }
 
   function passwordChange(e: ChangeEvent<HTMLInputElement>) {
     if (e.target.value.length >= 8 && e.target.value.length < 20) {
-      e.target.classList.add("border-green");
-      e.target.classList.remove("border-red");
+    
       setPasswordValid(true);
     } else {
-      e.target.classList.remove("border-green");
-      e.target.classList.add("border-red");
+     
       setPasswordValid(false);
     }
   }
@@ -83,11 +90,13 @@ function Registration() {
         </div>
         <form className="registration__form">
           <input
+          style={styleInputLogin}
             className="registration__form-input login"
             placeholder="Почта/Телефон"
             onChange={(e) => nameChange(e)}
           />
           <input
+          style={styleInputPassword}
             className="registration__form-input password"
             placeholder="Пароль"
             type="password"
