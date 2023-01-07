@@ -1,12 +1,14 @@
 import { ChangeEvent, useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "../styles/global.css";
 import "../styles/registration.css";
 
-function Registration():JSX.Element  {
+function Registration(): JSX.Element {
 	const [isLoginValid, setLoginValid] = useState(false);
 	const [isPasswordValid, setPasswordValid] = useState(false);
 	const [isAgree, setAgree] = useState(false);
 	const [userName, setUserName] = useState("?");
+	const navigate =useNavigate();
 
 	const styleInputLogin = {
 		outline: isLoginValid ? "3px solid green" : "3px solid red",
@@ -26,7 +28,8 @@ function Registration():JSX.Element  {
 	const btnPress = () => {
 		if (isLoginValid && isPasswordValid && isAgree) {
 			setStylePop({ display: "flex" });
-			setTimeout(() => (window.location.href = "/"), 3000);
+			// setTimeout(() => (window.location.href = "/"), 3000);
+			setTimeout(()=> navigate("/"),3000);
 		} else {
 			const message: string =
 				(!isLoginValid ? "Некорректный email адресс  \n" : "") +
@@ -107,7 +110,6 @@ function Registration():JSX.Element  {
 				<div className="registration__alter-enter">
 					<div className="registration__linia"></div>
 					<div className="registration__alter-enter-text">Войти через</div>
-
 					<div className="registration__linia"></div>
 				</div>
 			</div>

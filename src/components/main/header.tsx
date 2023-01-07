@@ -12,23 +12,17 @@ const arrMenuElements = [
 ];
 
 function Header() {
-  return (
-    <div className="header">
-      <img
-         src={Her}
-        
-        alt="logo"
-        className="header__img"
-      ></img>
-
-      <div className="header__menu">
-      {arrMenuElements.map((item) => (
-						<div key={item.toString()} className="header__item">
-							{item}
-						</div>
-					))}
-      </div>
-    </div>
-  );
+	return (
+		<div className="header">
+			<img src={Her} alt="logo" className="header__img"></img>
+			<ul className="header__menu">
+				{arrMenuElements.map((item) => (
+					<li key={item.toString()} className="header__item">
+						{item}
+					</li>
+				))}
+			</ul>
+		</div>
+	);
 }
 export default Header;

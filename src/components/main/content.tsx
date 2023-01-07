@@ -8,10 +8,8 @@ import iconMail from "../../images/icons/Mail.png";
 import imageBrowser from "../../images/ImageBrowser.png";
 import { Link } from "react-router-dom";
 
-
 function Content() {
-
-
+  
   return (
     <div className="content">
       <div className="content__section1">
@@ -35,7 +33,6 @@ function Content() {
             доступом в интернет от 15 мбит/с на всех операционых системах
             Windows 7, 8, 10 MacOS и Linux .
           </div>
-
           <div className="content__text4">Загрузить</div>
           <div className="content__linia3"></div>
         </div>
@@ -54,9 +51,7 @@ function Content() {
               <img src={iconMail} className="content__section3-icon"></img>
               <div className="content__text5">Создайте аккаунт</div>
             </div>
-
             <div className="content__section3-linia"></div>
-
             <div className="content__section3-box">
               <img src={iconDownload} className="content__section3-icon"></img>
               <div className="content__text5">Скачайте модуль</div>
@@ -68,7 +63,6 @@ function Content() {
               <img src={iconLibrary} className="content__section3-icon"></img>
               <div className="content__text5">Выберите тариф</div>
             </div>
-
             <div className="content__section3-linia"></div>
             <div className="content__section3-box">
               <img src={iconApple} className="content__section3-icon"></img>

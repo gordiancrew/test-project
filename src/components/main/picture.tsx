@@ -28,7 +28,6 @@ function Picture() {
 		setTimeout(() => {
 			count++;
 			setSliderImage(arraySliders[count % 4]);
-			console.log(count);
 		}, 3000);
 	}, [sliderImage]);
 
