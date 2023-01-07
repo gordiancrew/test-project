@@ -44,17 +44,11 @@ function Picture() {
 					||
 				</div>
 				<ul className={classBurgerMenu}>
-					{/* <div className="burger__item"> Главная </div>
-					<div className="burger__item"> Сервера </div>
-					<div className="burger__item">Открыть в браузере </div>
-					<div className="burger__item"> Скачать </div>
-					<div className="burger__item"> Открыть в браузере </div>
-					<div className="burger__item"> Цены </div>
-					<div className="burger__item"> Тех поддержка </div>
-					<div className="burger__item">Контакты </div> */}
-
-
-          {arrMenuElements.map((item)=><li className="burger__item">{item}</li>)}
+					{arrMenuElements.map((item) => (
+						<li key={item.toString()} className="burger__item">
+							{item}
+						</li>
+					))}
 				</ul>
 				<img src={sliderImage} className="picture__img"></img>
 				<div className="picture__text-little">Сервис облачного гейминга</div>
