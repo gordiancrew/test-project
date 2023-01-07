@@ -6,6 +6,7 @@ import iconDownload from "../../images/icons/Download.png";
 import iconLibrary from "../../images/icons/Library.png";
 import iconMail from "../../images/icons/Mail.png";
 import imageBrowser from "../../images/ImageBrowser.png";
+import { Link } from "react-router-dom";
 
 
 function Content() {
@@ -91,9 +92,9 @@ function Content() {
             Доступно: Каталог игр Виртуальный ПК Безлимитная игровая сессия
           </div>
           <div className="content__card-black-button-wrapper">
-            <a href="registration">
+            <Link to="registration">
               <div className="content__card-black-button">Выбрать</div>
-            </a>
+            </Link>
           </div>
         </div>
 
@@ -107,11 +108,11 @@ function Content() {
             Игровая сессия 10 часов/день
           </div>
           <div className="content__card-black-button-wrapper">
-            <a href="registration">
+            <Link to="registration">
               <div className="content__card-black-button button-inverse button2" >
                 Выбрать
               </div>
-            </a>
+            </Link>
           </div>
         </div>
 
@@ -124,9 +125,9 @@ function Content() {
             Игровая сессия 4 часов/день
           </div>
           <div className="content__card-black-button-wrapper">
-            <a href="registration">
+            <Link to="registration">
               <div className="content__card-black-button">Выбрать</div>
-            </a>
+            </Link>
           </div>
         </div>
       </div>
