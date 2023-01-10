@@ -1,6 +1,7 @@
 import Header from "./header";
 import Picture from "./picture";
 import Content from "./content";
+import Footer from "./footer";
 
 function Home() {
 
@@ -10,6 +11,7 @@ function Home() {
             <Header />
             <Picture />
             <Content />
+            <Footer />
 
         </div>
     )

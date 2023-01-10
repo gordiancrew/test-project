@@ -1,6 +1,6 @@
 import "../styles/global.css";
 import "../styles/header.css";
-import Her from "../../images/image_2022_12_24T22_33_54_463Z.png";
+import Hert from "../../images/image_2022_12_24T22_33_54_463Z.png";
 const arrMenuElements = [
 	"Главная",
 	"Сервера",
@@ -14,7 +14,7 @@ const arrMenuElements = [
 function Header() {
 	return (
 		<div className="header">
-			<img src={Her} alt="logo" className="header__img"></img>
+			<img src={Hert} alt="logo" className="header__img"></img>
 			<ul className="header__menu">
 				{arrMenuElements.map((item) => (
 					<li key={item.toString()} className="header__item">
